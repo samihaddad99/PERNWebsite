@@ -28,6 +28,7 @@ const connectionString = $DATABASE_URL;
 const pool = new Pool({
   "postgres://nglyfwwl":"VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt@heffalump.db.elephantsql.com/nglyfwwl"
 });
+
 // local pool
 // const pool = new Pool({
 //   user: 'nglyfwwl',
@@ -39,7 +40,7 @@ const pool = new Pool({
 
 const getMerchants = () => {
   return new Promise(function(resolve, reject) {
-    pool.query('SELECT * FROM merchants ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM public.merchants ORDER BY id ASC', (error, results) => {
       if (error) {
         reject(error)
       }
