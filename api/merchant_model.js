@@ -26,7 +26,7 @@ const connectionString = $DATABASE_URL;
 // });
 
 const pool = new Pool({
-  connectionString
+  "postgres://nglyfwwl:VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt@heffalump.db.elephantsql.com/nglyfwwl"
 });
 // local pool
 // const pool = new Pool({
@@ -44,8 +44,8 @@ const getMerchants = () => {
         reject(error)
       }
       resolve(results.rows);
-    })
-  }) 
+    });
+  });
 }
   
 const createMerchant = (body) => {
