@@ -27,7 +27,7 @@ const connectionString = $DATABASE_URL;
 
 const pool = new Pool({
   connectionString
-})
+});
 // local pool
 // const pool = new Pool({
 //   user: 'nglyfwwl',
