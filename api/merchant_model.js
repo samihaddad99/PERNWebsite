@@ -26,7 +26,7 @@ const connectionString = $DATABASE_URL;
 // });
 
 const pool = new Pool({
-  "postgres://nglyfwwl:VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt@heffalump.db.elephantsql.com/nglyfwwl";
+  "postgres://nglyfwwl":"VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt@heffalump.db.elephantsql.com/nglyfwwl"
 });
 // local pool
 // const pool = new Pool({
