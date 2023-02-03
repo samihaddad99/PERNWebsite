@@ -40,7 +40,7 @@ const pool = new Pool({
 
 const getMerchants = () => {
   return new Promise(function(resolve, reject) {
-    pool.query('SELECT * FROM public.merchants ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM merchants ORDER BY id ASC;', (error, results) => {
       if (error) {
         reject(error)
       }
@@ -53,7 +53,7 @@ const createMerchant = (body) => {
   return new Promise(function(resolve, reject) {
     const { name, email } = body
 
-    pool.query('INSERT INTO merchants (name, email) VALUES ($1, $2) RETURNING *', [name, email], (error, results) => {
+    pool.query('INSERT INTO merchants (name, email) VALUES ($1, $2) RETURNING *;', [name, email], (error, results) => {
       if (error) {
         reject(error)
       }
@@ -66,7 +66,7 @@ const deleteMerchant = (merchantId) => {
   return new Promise(function(resolve, reject) {
     const id = parseInt(merchantId)
 
-    pool.query('DELETE FROM merchants WHERE id = $1', [id], (error, results) => {
+    pool.query('DELETE FROM merchants WHERE id = $1;', [id], (error, results) => {
       if (error) {
         reject(error)
       }
@@ -80,7 +80,7 @@ const updateMerchant = (id, body) => {
   return new Promise(function(resolve, reject) {
     let pid = parseInt(id)
     
-    pool.query('UPDATE merchants SET name=$1, email=$2 WHERE id=$3',[body.name, body.email, pid], (error, results) => {
+    pool.query('UPDATE merchants SET name=$1, email=$2 WHERE id=$3;',[body.name, body.email, pid], (error, results) => {
       if (error) {
         reject(error)
       }
