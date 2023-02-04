@@ -125,6 +125,9 @@ export default function Database() {
                 </tr>
             )})}
             <tr>
+              <td>Add Merchant</td>
+              <td></td>
+              <td></td>
               <td><div className="buttons"><Button onClick={createMerchant}>Add Merchant</Button></div></td>
             </tr>
         </tbody>
