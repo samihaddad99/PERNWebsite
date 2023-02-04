@@ -25,19 +25,6 @@ const pool = new Pool({
   ssl: isProduction ? { rejectUnauthorized: false } : false,
 });
 
-// const pool = new Pool({
-//   "postgres://nglyfwwl":"VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt@heffalump.db.elephantsql.com/nglyfwwl"
-// });
-
-// local pool
-// const pool = new Pool({
-//   user: 'nglyfwwl',
-//   host: 'heffalump.db.elephantsql.com',
-//   database: 'nglyfwwl',
-//   password: 'VgEsZXQmoxonCtdAw9xXgMNEJdeeLBQt',
-//   port: 5432,
-// });
-
 const getMerchants = () => {
   return new Promise(function(resolve, reject) {
     pool.query('SELECT * FROM merchants ORDER BY id ASC;', (error, results) => {

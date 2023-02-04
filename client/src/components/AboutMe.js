@@ -20,11 +20,8 @@ export default function AboutMe() {
           and Network Engineer program.
           Some of my hobbies include playing piano, making music,
           and programming.
-          I have recently taken interest in Video Game design
-          on my free-time,
-          and I enjoy experimenting with Unreal Engine.
-          I also enjoy diving deep into lower-level languages,
-          because they help me understand computer fundamentals.
+          I have been learning TensorFlow 2.0 using Python and have finished <a href="https://www.freecodecamp.org/learn/machine-learning-with-python/">a course on Machine-Learning and A.I</a> and would like to be apart of this technological breakthrough.
+          I have been applying this knowledge in my Capstone project.
         </p>
       </div>
 }

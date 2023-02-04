@@ -101,7 +101,8 @@ export default function Database() {
 
     return (
     <div>
-        <div className="buttons"><Button onClick={createMerchant}>Add Merchant</Button></div>
+        <h2 className="heading">Database</h2>
+        
         
         <br />
         <h3>Table of Merchants</h3>
@@ -123,6 +124,9 @@ export default function Database() {
                 <td className="flex"><Button onClick={() => {deleteMerchant(val.id)}}>Delete</Button><Button onClick={() => {editMerchant(val.id)}}>Edit</Button></td>
                 </tr>
             )})}
+            <tr>
+              <td><div className="buttons"><Button onClick={createMerchant}>Add Merchant</Button></div></td>
+            </tr>
         </tbody>
         </Table>
         </div>
