@@ -18,6 +18,16 @@ export default function Projects() {
       <div className="hint center">you can click on any of the previews for the GitHub links!</div>
       <div id='carousel'>
       <Carousel className="crsl-cont">
+        {/* Tiny Tech */}
+      <Carousel.Item>
+        <a id="imgLink" href="https://devpost.com/software/tiny-techs"><img alt="Tiny Tech Game Preview" src={require("./imgs/TinyTechsPreview.png")} /></a>
+        <Carousel.Caption >
+          <div className="cap-text-cont">
+          <h3>Tiny Tech Game Preview<Badge>Unity/C#</Badge></h3>
+          <p>A 2D Game in Unity (Hackville 2nd Place Winner)</p>
+          </div>
+        </Carousel.Caption>
+      </Carousel.Item>
       {/* Calculator App */}
       <Carousel.Item className="lastName">
         <a href="https://github.com/samihaddad99/CalculatorApplication"><img alt="Calculator Application Preview" src={require("./imgs/CalculatorAppPreview.png")} /></a>
