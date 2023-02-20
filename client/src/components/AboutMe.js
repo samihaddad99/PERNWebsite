@@ -23,5 +23,10 @@ export default function AboutMe() {
           I have been learning TensorFlow 2.0 using Python and have finished <a href="https://www.freecodecamp.org/learn/machine-learning-with-python/">a course on Machine-Learning and A.I</a> and would like to be apart of this technological breakthrough.
           I have been applying this knowledge in my Capstone project.
         </p>
+        <p>
+          I have recently participated in my first hackathon (Hackville 2023), and to my surprise, we won second place.
+          You can check out the overview of our project <a href="https://devpost.com/software/tiny-techs">through this link right here</a>.
+          We're planning to bring more projects to life at Tiny Tech Studios, and are looking to compete in more hackathons soon.
+        </p>
       </div>
 }
