@@ -66,8 +66,8 @@ export default function Database() {
 
       function editMerchant(id) {
         // let id = prompt('Enter merchant id');
-        let name = prompt('Enter merchant name');
-        let email = prompt('Enter merchant email');
+        let name = prompt('Enter subscriber name');
+        let email = prompt('Enter subscriber email');
 
         // console.log(id);
 
@@ -105,7 +105,7 @@ export default function Database() {
         
         
         <br />
-        <h3>Table of Merchants</h3>
+        <h3>Table of Subscribers</h3>
         {document.addEventListener('DOMContentLoaded', convTable(merchants))}
         <div className="table-responsive">
         <Table className="table table-dark">
@@ -128,7 +128,7 @@ export default function Database() {
               <td></td>
               <td></td>
               <td></td>
-              <td><div className="buttons"><Button onClick={createMerchant}>Add Merchant</Button></div></td>
+              <td><div className="buttons"><Button onClick={createMerchant}>Add Subscriber</Button></div></td>
             </tr>
         </tbody>
         </Table>
