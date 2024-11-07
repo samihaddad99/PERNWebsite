@@ -4,9 +4,9 @@
 
 const express = require('express');
 var router = express.Router();
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 3001; // used to be just 3001
-const merchant_model = require('../merchant_model') // import the merchant functions
+const user_model = require('../user-model'); // import the user functions
 const cors = require("cors");
 const morgan = require("morgan");
 
@@ -22,7 +22,8 @@ app.use(cors());
 // });
 
 const allowedOrigins = ['https://pernstack-backend.herokuapp.com/',
-                      'https://sami-haddad.netlify.app'];
+                      'https://sami-haddad.netlify.app',
+                      'http://localhost:3000'];
 app.use(cors({
   origin: function(origin, callback){
     if(!origin) return callback(null, true);
@@ -37,7 +38,7 @@ app.use(cors({
 app
 .route("/")
 .get(async function(req, res, next) {
-  merchant_model.getMerchants()
+  user_model.getUsers()
   .then(response => {
     res.status(200).send(response);
   })
@@ -47,9 +48,9 @@ app
 });
 
 app
-.route('/merchants')
+.route('/users')
 .post((req, res) => {
-  merchant_model.createMerchant(req.body)
+  user_model.createUser(req.body)
   .then(response => {
     res.status(200).send(response);
   })
@@ -59,9 +60,9 @@ app
 })
 
 app
-.route('/merchants/:id')
+.route('/users/:id')
 .delete( (req, res) => {
-  merchant_model.deleteMerchant(req.params.id)
+  user_model.deleteUser(req.params.id)
   .then(response => {
     res.status(200).send(response);
   })
@@ -71,10 +72,10 @@ app
 })
 
 app
-.route('/merchants/:id')
+.route('/users/:id')
 .put((req, res) => {
-  console.log("calling update merchant");
-  merchant_model.updateMerchant(req.params.id, req.body)
+  console.log("calling update user");
+  user_model.updateUser(req.params.id, req.body)
   .then(response => {
     res.status(200).send(response);
   })
@@ -87,7 +88,7 @@ app.listen(PORT, () => {
   console.log(`App running on port ${PORT}.`)
 })
 
-// implement merchant table routing
+// implement user table routing
 
 module.exports = router;
 
