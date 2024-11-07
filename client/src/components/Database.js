@@ -12,28 +12,33 @@ import Button from "react-bootstrap/Button";
 
 export default function Database() {
 
-    const [merchants, setMerchants] = useState(false);
-    const backend = "https://pernstack-backend.herokuapp.com/";
-
+    const [users, setUsers] = useState(false);
+    const backend = "https://pernstack-backend.herokuapp.com";
+    // const backend = "localhost:8080/"
     useEffect(() => {
-        getMerchant();
+        getUser();
     }, []);
 
-    function getMerchant() {
-        fetch(`${backend}`)
+    function getUser() {
+        fetch(`${backend}`, {
+          method: "GET",
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })
           .then(response => {
-            return response.text();
+            return response.json();
           })
           .then(data => {
-            setMerchants(data);
+            setUsers(data);
           });
       }
 
-      function createMerchant() {
-        let name = prompt('Enter merchant name');
-        let email = prompt('Enter merchant email');
+      function createUser() {
+        let name = prompt('Enter user name');
+        let email = prompt('Enter user email');
 
-        fetch(`${backend}merchants`, {
+        fetch(`${backend}/users`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -45,14 +50,14 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getMerchant();
+            getUser();
           });
       }
 
-      function deleteMerchant(id) {
-        // let id = prompt('Enter merchant id');
+      function deleteUser(id) {
+        // let id = prompt('Enter user id');
 
-        fetch(`${backend}merchants/${id}`, {
+        fetch(`${backend}/users/${id}`, {
           method: 'DELETE',
         })
           .then(response => {
@@ -60,18 +65,18 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getMerchant();
+            getUser();
           });
       }
 
-      function editMerchant(id) {
-        // let id = prompt('Enter merchant id');
+      function editUser(id) {
+        // let id = prompt('Enter user id');
         let name = prompt('Enter subscriber name');
         let email = prompt('Enter subscriber email');
 
         // console.log(id);
 
-        fetch(`${backend}merchants/${id}`, {
+        fetch(`${backend}/users/${id}`, {
           
           headers: {
             'Content-Type': 'application/json',
@@ -84,7 +89,7 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getMerchant();
+            getUser();
           });
       }
 
@@ -94,8 +99,8 @@ export default function Database() {
         { id: "3", name: "Subham", email: "Male"},
       ];
 
-      function convTable(merchants) {
-        let table = JSON.parse(merchants);
+      function convTable(users) {
+        let table = JSON.parse(users);
         tbl = table;
       }
 
@@ -105,8 +110,8 @@ export default function Database() {
         
         
         <br />
-        <h3>Table of Subscribers</h3>
-        {document.addEventListener('DOMContentLoaded', convTable(merchants))}
+        <h3>Table of Users</h3>
+        {document.addEventListener('DOMContentLoaded', convTable(users))}
         <div className="table-responsive">
         <Table className="table table-dark">
         <thead>
@@ -121,14 +126,14 @@ export default function Database() {
                 <td>{val.id}</td>
                 <td>{val.name}</td>
                 <td>{val.email}</td>
-                <td className="flex"><Button onClick={() => {deleteMerchant(val.id)}}>Delete</Button><Button onClick={() => {editMerchant(val.id)}}>Edit</Button></td>
+                <td className="flex"><Button onClick={() => {deleteUser(val.id)}}>Delete</Button><Button onClick={() => {editUser(val.id)}}>Edit</Button></td>
                 </tr>
             )})}
             <tr>
               <td></td>
               <td></td>
               <td></td>
-              <td><div className="buttons"><Button onClick={createMerchant}>Add Subscriber</Button></div></td>
+              <td><div className="buttons"><Button onClick={createUser}>Add User</Button></div></td>
             </tr>
         </tbody>
         </Table>
