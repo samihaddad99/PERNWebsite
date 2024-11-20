@@ -36,7 +36,7 @@ app.use(cors({
 }));
 
 app
-.route("/")
+.route("/users")
 .get(async function(req, res, next) {
   user_model.getUsers()
   .then(response => {

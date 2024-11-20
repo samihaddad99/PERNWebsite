@@ -14,13 +14,13 @@ export default function Database() {
 
     const [users, setUsers] = useState(false);
     const backend = "https://pernstack-backend.herokuapp.com";
-    // const backend = "localhost:8080/"
+
     useEffect(() => {
-        getUser();
+        getUsers();
     }, []);
 
-    function getUser() {
-        fetch(`${backend}`, {
+    function getUsers() {
+        fetch(`${backend}/users`, {
           method: "GET",
           headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getUser();
+            getUsers();
           });
       }
 
@@ -65,7 +65,7 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getUser();
+            getUsers();
           });
       }
 
@@ -89,7 +89,7 @@ export default function Database() {
           })
           .then(data => {
             alert(data);
-            getUser();
+            getUsers();
           });
       }
 
