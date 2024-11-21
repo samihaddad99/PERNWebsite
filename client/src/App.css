@@ -10,6 +10,7 @@
   height: 100%;
   width: 100%;
   margin: 0;
+  background: linear-gradient(to right, #007078, #030b48);
 }
 
 .body-style {
@@ -59,6 +60,28 @@ Nav > ul {
   padding: 10px;
 } 
 
+.tab-grp .nav-item .nav-link {
+  color: #14b995;
+}
+
+/* Change the background color of the active tab */
+.tab-grp .nav-item .nav-link.active {
+  background: radial-gradient(circle, rgb(1, 77, 83), rgb(28, 128, 128));
+  border-color: rgb(24, 116, 39);
+  color: rgb(84, 206, 92);
+}
+
+/* Clears tab spacing */
+.nav.nav-tabs.tab-grp {
+  border-bottom: solid 0.1em rgb(47, 220, 255) !important;
+  /* border-bottom: none !important; */
+}
+/* Removes/edits the tab borders (onhover) */
+/* .nav.nav-tabs.tab-grp .nav-link {
+  border: none !important;
+} */
+
+
 .crsl-cont img {
   height:60vh;
   width:60vh;
@@ -92,26 +115,50 @@ footer {
 }
 
 .hint {
-  color:#588157;
+  color:#76af75;
   font-style: italic;
   margin-top:1em;
 }
-
+/* Used in AboutMe*/
 .BodyText {
-  padding: 2.6em;
-  width:50%;
-  color:#264653;
+  padding: 2em;
+  max-width:70vw;
+  height:80vh;
+  /* color:#264653; */
+  color:#38a3a5;
   display:inline-flexbox;
   flex-wrap: wrap;
   margin:auto;
   margin-top:1em;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1.3em;
+  font-size: 1em;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  border: 0.4em solid black;
-  box-shadow: 5px 10px #888888;
+  /* text-shadow: 0.3em 0.15em 0.5em black; */
+  /* border: 0.4em solid black;
+  box-shadow: 5px 10px #888888; */
 }
+
+/* Used in Projects and Contact*/
+.BodyText2 {
+  padding: 2em;
+  max-width:50wv;
+  color:#38a3a5;
+  display:inline-flexbox;
+  flex-wrap: wrap;
+  margin:auto;
+  /* margin-top:1em; */
+  margin:4vh 10vw 0 10vw;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* border: 0.2em solid rgb(15, 0, 64); */
+  border-radius: 1.5em;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #718989, #060458);
+}
+
 
 .Footer {
   position: fixed;
@@ -122,18 +169,17 @@ footer {
 }
 
 .pfp {
-  /* clip-path: circle(); */
+  clip-path: circle();
   border-radius: 100%;
   /* left:200px; */
   float:left;
-  /* shape-outside:url("./pfp.png"); */
-  /* shape-outside:margin-box; */
+  shape-outside:url("./components/imgs/pfp.png");
+  shape-outside:margin-box;
   shape-margin: 10px;
   display: block;
   box-shadow: -2px 5px #d1fae5;
-  width: 30%;
-  height: 30%;
-  max-width: 200px;
+  width: 30vh;
+  height: 30vh;
 }
 
 .center
@@ -142,9 +188,12 @@ footer {
 }
 
 p > a {
-  color:#3a5a40;
+  color:#94e892;
 }
 
+a:hover{
+  color:#28fbff;
+}
 p {
   margin:10px;
 }
