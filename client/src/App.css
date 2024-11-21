@@ -6,26 +6,39 @@
   padding: 0;
 }
 
+/* Define root colour variables */
+:root {
+  --dark1-color: #00171F;
+  --dark2-color: #003459;
+  --mid-color: #348AA7;
+  --high1-color: #DB5461;
+  --high2-color: #FFFFFF;
+}
+
 #root {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: linear-gradient(to right, #007078, #030b48);
+  background: linear-gradient(to left, var(--dark2-color), var(--dark1-color));
+}
+
+
+html {
+  font-size:calc(16px + 0.1vw);
 }
 
 .body-style {
+  justify-content: center;
   height: 100vh;
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
   font-weight: initial;
   line-height: 1.5;
-  color: #333; 
   -webkit-font-smoothing: antialiased;
-  background-color: #F2F2F2;
   overflow: hidden;
   font-family: "Roboto",sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -39,7 +52,7 @@ Nav > ul {
   display:flex;
   direction: ltr;
   flex-direction: row;
-  padding-right: 3em;
+  padding-right: 3rem;
   justify-content: space-between;
 }
 
@@ -47,7 +60,7 @@ Nav > ul {
 ** Start Carousel Styling 
 */
 .carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color:#2a9d8f;
+  background-color:var(--dark2-color);
   box-shadow: 5px;
   border-radius: 25%;
 }
@@ -61,19 +74,19 @@ Nav > ul {
 } 
 
 .tab-grp .nav-item .nav-link {
-  color: #14b995;
+  color: var(--mid-color);
 }
 
 /* Change the background color of the active tab */
 .tab-grp .nav-item .nav-link.active {
-  background: radial-gradient(circle, rgb(1, 77, 83), rgb(28, 128, 128));
-  border-color: rgb(24, 116, 39);
-  color: rgb(84, 206, 92);
+  background: radial-gradient(circle, var(--dark1-color), var(--dark2-color));
+  border-color: var(--high1-color);
+  color: var(--high1-color);
 }
 
 /* Clears tab spacing */
 .nav.nav-tabs.tab-grp {
-  border-bottom: solid 0.1em rgb(47, 220, 255) !important;
+  border-bottom: solid 0.1em var(--high1-color) !important;
   /* border-bottom: none !important; */
 }
 /* Removes/edits the tab borders (onhover) */
@@ -92,7 +105,7 @@ Nav > ul {
 }
 
 .cap-text-cont {
-  background-color:#2a9d8f;
+  background-color:var(--dark1-color);
   opacity: 70%;
   border-radius: 1em;
 }
@@ -115,19 +128,22 @@ footer {
 }
 
 .hint {
-  color:#76af75;
+  color:var(--high2-color);
   font-style: italic;
   margin-top:1em;
 }
+
 /* Used in AboutMe*/
 .BodyText {
   padding: 2em;
   max-width:70vw;
-  height:80vh;
+  /* height:80vh; */
   /* color:#264653; */
-  color:#38a3a5;
-  display:inline-flexbox;
+  color:var(--high1-color);
+  /* display:flex;
   flex-wrap: wrap;
+  align-items: center;     */
+  height: 100vh;           /* Optional: Makes the container take full viewport height */
   margin:auto;
   margin-top:1em;
   text-align: justify;
@@ -139,12 +155,16 @@ footer {
   box-shadow: 5px 10px #888888; */
 }
 
+.BodyText img {
+  float:left;
+}
+
 /* Used in Projects and Contact*/
 .BodyText2 {
   padding: 2em;
   max-width:50wv;
-  color:#38a3a5;
-  display:inline-flexbox;
+  color:var(--high1-color);
+  /* display:inline-flexbox; */
   flex-wrap: wrap;
   margin:auto;
   /* margin-top:1em; */
@@ -156,7 +176,7 @@ footer {
   /* border: 0.2em solid rgb(15, 0, 64); */
   border-radius: 1.5em;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom, #718989, #060458);
+  background: linear-gradient(to bottom, var(--dark1-color), var(--dark2-color));
 }
 
 
@@ -188,12 +208,13 @@ footer {
 }
 
 p > a {
-  color:#94e892;
+  color:var(--mid-color);
 }
 
 a:hover{
   color:#28fbff;
 }
+
 p {
   margin:10px;
 }
