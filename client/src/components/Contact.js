@@ -9,7 +9,6 @@ import ReactDOM from 'react-dom'
 
 export default function Contact() {
     return <div>
-      <h2>Contact Information</h2>
       <p className='BodyText'>Email: Haddad0@sheridancollege.ca</p>
       <p className='BodyText'>Phone Number: (905)330-9867</p>
       <p className='BodyText'><a href="https://github.com/samihaddad99/samihaddad99">GitHub Profile</a></p>

@@ -46,10 +46,6 @@ export default function Database() {
         console.error("Error occurred:", error);  // Log any errors from the fetch call
       });
     }
-    
-    
-  
-
       function createUser() {
         let name = prompt('Enter user name');
         let email = prompt('Enter user email');

@@ -98,15 +98,16 @@ footer {
 }
 
 .BodyText {
-  padding: 3em;
+  padding: 2.6em;
   width:50%;
   color:#264653;
   display:inline-flexbox;
   flex-wrap: wrap;
   margin:auto;
+  margin-top:1em;
   text-align: justify;
   text-justify: inter-word;
-  font-size: 1em;
+  font-size: 0.8em;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border: 0.4em solid black;
   box-shadow: 5px 10px #888888;

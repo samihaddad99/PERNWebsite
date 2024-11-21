@@ -9,6 +9,11 @@ import ReactDOM from 'react-dom'
 import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 
+import tinytech from "./imgs/TinyTechsPreview.png";
+import calculator from "./imgs/CalculatorAppPreview.png";
+import pong from "./imgs/PongApplicationPreview.png";
+import webcam from "./imgs/WebcamTrackingPreview.png";
+
 function component(){
 
 }
@@ -19,28 +24,28 @@ export default function Projects() {
       title: "Tiny Tech Game Preview",
       badge: "Unity/C#",
       description: "A 2D Game in Unity (Hackville 2nd Place Winner)",
-      imageUrl: "./imgs/TinyTechsPreview.png",
+      imageUrl: tinytech,
       link: "https://devpost.com/software/tiny-techs"
     },
     {
       title: "Calculator Application",
       badge: "C#/UWP",
       description: "A fully-functional simple calculator made with C# and UWP",
-      imageUrl: "./imgs/CalculatorAppPreview.png",
+      imageUrl: calculator,
       link: "https://github.com/samihaddad99/CalculatorApplication"
     },
     {
       title: "Pong Application",
       badge: "Python/Turtle",
       description: "A re-creation of the classic game Pong, with 2 players",
-      imageUrl: "./imgs/PongApplicationPreview.png",
+      imageUrl: pong,
       link: "https://github.com/samihaddad99/Pong"
     },
     {
       title: "Webcam Tracking Application",
       badge: "C#/WPF",
       description: "An application that tracks movement",
-      imageUrl: "./imgs/WebcamTrackingPreview.png",
+      imageUrl: webcam,
       link: "https://github.com/samihaddad99/WebcamTracking"
     },
   ];
@@ -49,7 +54,7 @@ export default function Projects() {
       <a href={project.link}>
         <img 
           alt={`${project.title} Preview`} 
-          //src={require(project.imageUrl)}
+          src={project.imageUrl}
           className={index === 2 ? "d-block w-100" : ""}
         />
       </a>
@@ -63,7 +68,6 @@ export default function Projects() {
   );
   return (
   <div>
-    <h2>My Projects</h2>
     <p className='BodyText center'>
       This is a list of some of the projects I have made
     </p>

@@ -26,9 +26,9 @@ function App() {
         <Tab eventKey="contact" title="Contact" className="nav-item">
           <Contact />
         </Tab>
-        <Tab eventKey="database" title="Database" className="nav-item">
+        {/* <Tab eventKey="database" title="Database" className="nav-item">
           <Database />
-        </Tab>
+        </Tab> */}
       </Tabs>
       );
 }
