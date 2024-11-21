@@ -20,19 +20,35 @@ export default function Database() {
     }, []);
 
     function getUsers() {
-        fetch(`${backend}/users`, {
-          method: "GET",
-          headers: {
-            'Content-Type': 'application/json',
-          }
-        })
-          .then(response => {
-            return response.json();
-          })
-          .then(data => {
-            setUsers(data);
-          });
-      }
+      fetch(`${backend}/users`, {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then(response => {
+        console.log("Response object:", response);
+        return response.text();  // Get the raw body as text
+      })
+      .then(rawBody => {
+        console.log("Raw body as text:", rawBody);  // Log the raw body to check its format
+    
+        try {
+          const parsedData = JSON.parse(rawBody);  // Attempt to parse the JSON
+          console.log("Parsed JSON data:", parsedData);
+          setUsers(parsedData);  // Pass parsed data to your React state
+        } catch (error) {
+          console.error("Failed to parse JSON:", error);  // Log any parsing errors
+          // Optionally, you can display a default message or handle the error in a different way
+        }
+      })
+      .catch((error) => {
+        console.error("Error occurred:", error);  // Log any errors from the fetch call
+      });
+    }
+    
+    
+  
 
       function createUser() {
         let name = prompt('Enter user name');

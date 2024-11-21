@@ -31,6 +31,7 @@ const getUsers = () => {
       if (error) {
         reject(error)
       }
+      console.log(results.rows)
       resolve(results.rows);
     });
   });
