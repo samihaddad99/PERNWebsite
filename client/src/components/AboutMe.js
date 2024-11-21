@@ -23,7 +23,7 @@ export default function AboutMe() {
   I have also won a Google Award at the <a href="https://devpost.com/software/maplebridge">last hackathon I competed in</a>,
     where I mainly worked on implementing A.I features in our mobile application called MapleBridge.<br></br><br></br>
 
-  While attending school, I am also working on a continuation of my team's Capstone project, where we made it to the top 10 projects
+  While attending school, I am also working on a continuation of my team's <a href="https://www.youtube.com/watch?v=Y8fani3ousg&t=19s&ab_channel=JacobBullock">Capstone project</a>, where we made it to the top 10 projects
   for the 2023-2024 year at Sheridan. We are expecting completion of our MVP by the 3rd quarter of 2025.
 </p>
 </div>
