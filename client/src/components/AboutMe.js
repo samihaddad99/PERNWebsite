@@ -8,7 +8,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 export default function AboutMe() {
-    return <div className="AboutSection">
+    return <div className="AboutSection body">
 <p className="BodyText">
   <img className="pfp" width="300" height="300" src={require('./imgs/pfp.png')} alt="Me"></img>
   Hello and Welcome to my PERN (Postgresql/Express/React/Node) stack website!

@@ -68,7 +68,7 @@ export default function Projects() {
   );
   return (
   <div>
-    <p className='BodyText2 center'>
+    <p className='BodyText2 center body'>
       This is a list of some of the projects that I've worked on
     </p>
     <div className="hint center">you can click on any of the previews for the GitHub links!</div>

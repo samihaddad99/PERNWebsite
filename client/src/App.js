@@ -9,6 +9,7 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Database from "./components/Database";
+import Resume from "./components/Resume";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         {/* <Tab eventKey="database" title="Database" className="nav-item">
           <Database />
         </Tab> */}
+        <Tab eventKey="resume" title="Resume" className="nav-item">
+          <Resume />
+        </Tab>
       </Tabs>
       );
 }
