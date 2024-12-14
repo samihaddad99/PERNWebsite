@@ -7,11 +7,27 @@
 }
 
 /* Define root colour variables */
+/* :root {
+  --dark1-color: #16423C;
+  --dark2-color: #6A9C89;
+  --mid-color: #C4DAD2;
+  --high1-color: #E9EFEC;
+  --high2-color: #FFFFFF;
+} */
+
+/* :root {
+  --dark1-color: #0B8494;
+  --dark2-color: #125B9A;
+  --mid-color: #F05A7E;
+  --high1-color: #FFBE98;
+  --high2-color: #FFFFFF;
+} */
+
 :root {
-  --dark1-color: #00171F;
-  --dark2-color: #003459;
-  --mid-color: #348AA7;
-  --high1-color: #DB5461;
+  --dark1-color: #1E201E;
+  --dark2-color: #3C3D37;
+  --mid-color: #40ff00;
+  --high1-color: #ECDFCC;
   --high2-color: #FFFFFF;
 }
 
@@ -19,11 +35,12 @@
   height: 100%;
   width: 100%;
   margin: 0;
-  background: linear-gradient(to left, var(--dark2-color), var(--dark1-color));
+  background: linear-gradient(to top, var(--dark1-color), var(--dark2-color));
+  /* background: var(--dark1-color); */
 }
 
 .body {
-  background: linear-gradient(to left, var(--dark2-color), var(--dark1-color));
+  /* background: linear-gradient(to left, var(--dark2-color), var(--dark1-color)); */
 }
 
 html {
@@ -156,6 +173,16 @@ footer {
   /* text-shadow: 0.3em 0.15em 0.5em black; */
   /* border: 0.4em solid black;
   box-shadow: 5px 10px #888888; */
+}
+.BodyText > div {
+  border: solid 0.3rem black;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.3rem;
+  width:max-content;
+  background-color: black;
+  font-size: 0.9rem;
+  margin-bottom: calc(100vh/10);
 }
 
 .BodyText img {
