@@ -8,7 +8,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 export default function AboutMe() {
+  const img = require('./imgs/pfp.png');
     return <div className="AboutSection body">
+      <img src={img} alt="Profile Picture" className="pfp" />
 <p className="BodyText">
   <div>My name is Sami Haddad
   I'm an under-graduate student
