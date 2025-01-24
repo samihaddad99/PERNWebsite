@@ -13,6 +13,7 @@ import tinytech from "./imgs/TinyTechsPreview.png";
 import calculator from "./imgs/CalculatorAppPreview.png";
 import pong from "./imgs/PongApplicationPreview.png";
 import webcam from "./imgs/WebcamTrackingPreview.png";
+import maplebridge from "./imgs/MapleBridge.png";
 
 function component(){
 
@@ -26,6 +27,13 @@ export default function Projects() {
       description: "A 2D Game in Unity (Hackville 2nd Place Winner)",
       imageUrl: tinytech,
       link: "https://devpost.com/software/tiny-techs"
+    },
+    {
+      title: "MapleBridge",
+      badge: "SwiftUI/GCP/OpenAI",
+      description: "App that helps students get familiar with the new area",
+      imageUrl: maplebridge,
+      link: "https://devpost.com/software/maplebridge"
     },
     {
       title: "Calculator Application",
@@ -48,6 +56,7 @@ export default function Projects() {
       imageUrl: webcam,
       link: "https://github.com/samihaddad99/WebcamTracking"
     },
+    
   ];
   const renderCarouselItem = (project, index) => (
     <Carousel.Item key={index} className={index === 1 ? "lastName" : ""}>

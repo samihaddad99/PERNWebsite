@@ -7,18 +7,23 @@
 }
 
 :root {
-  --dark1-color: #2C3E50;  /* Deep blue-gray for background gradient start */
-  --dark2-color: #34495E;  /* Slightly lighter blue-gray for background gradient end */
-  --mid-color: #3498DB;    /* Bright blue for accents and highlights */
-  --high1-color: #ECF0F1;  /* Light gray for text backgrounds */
-  --high2-color: #FFFFFF;  /* Pure white for text and cards */
+  /* Modern Deep Purple to Blue gradient scheme */
+  --dark1-color: #1a1f3c;    /* Deep purple-blue */
+  --dark2-color: #2d3250;    /* Lighter purple-blue */
+  --mid-color: #6c63ff;      /* Vibrant purple-blue for accents */
+  --high1-color: #e6e9ff;    /* Light purple-tinted white */
+  --high2-color: #ffffff;    /* Pure white */
+  
+  /* Optional accent colors if needed */
+  --accent1: #00d4ff;        /* Bright cyan for highlights */
+  --accent2: #fb7185;        /* Soft pink for special elements */
 }
 
 #root {
   height: 100%;
   width: 100%;
   margin: 0;
-  background: linear-gradient(to top, var(--dark1-color), var(--dark2-color));
+  background: linear-gradient(135deg, var(--dark1-color), var(--dark2-color));
 }
 
 .body {
@@ -76,14 +81,16 @@ Nav > ul {
 } 
 
 .tab-grp .nav-item .nav-link {
-  color: var(--mid-color);
+  color: var(--high1-color);
+  opacity: 0.7;
 }
 
 /* Change the background color of the active tab */
 .tab-grp .nav-item .nav-link.active {
-  background: radial-gradient(circle, var(--dark1-color), var(--dark2-color));
-  border-color: var(--high1-color);
-  color: var(--high1-color);
+  background: rgba(108, 99, 255, 0.1);
+  border-color: var(--mid-color);
+  color: var(--high2-color);
+  opacity: 1;
 }
 
 /* Clears tab spacing */
@@ -141,7 +148,7 @@ footer {
   max-width:70vw;
 
   color:var(--high1-color);
-  background-color: var(--dark1-color);
+  background-color: rgba(26, 31, 60, 0.8);
   height: 50vh;        
   margin:auto;
   margin-top:1em;
@@ -150,9 +157,7 @@ footer {
   font-size: 1em;
   border-radius: 1rem;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* text-shadow: 0.3em 0.15em 0.5em black; */
-  /* border: 0.4em solid black;
-  box-shadow: 5px 10px #888888; */
+  border: 1px solid rgba(108, 99, 255, 0.2);
 }
 .BodyText > div {
   margin: 0.5rem;
@@ -205,11 +210,11 @@ footer {
 }
 
 p > a {
-  color:var(--mid-color);
+  color: var(--accent1);
 }
 
-a:hover{
-  color:#28fbff;
+a:hover {
+  color: var(--mid-color);
 }
 
 p {
@@ -248,6 +253,14 @@ label {
   border:#264653;
 }
 
+.contact-item {
+  margin: 2rem 0;  /* Adds vertical spacing between items */
+  padding: 1rem;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.2);  /* Subtle separator line */
+}
+ .contact-item:last-child {
+  border-bottom: none;  /* Removes border from last item */
+ }
 .buttons {
   width: 150px;
   display: flex;
